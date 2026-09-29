@@ -1,0 +1,126 @@
+=========================================
+      LINUX SERVER HEALTH ANALYZER
+=========================================
+
+Hostname:
+ip-172-31-4-34.ap-south-1.compute.internal
+
+Current Date & Time:
+Mon Sep 28 17:11:14 UTC 2026
+
+System Uptime:
+up 22 hours, 55 minutes
+
+=========================================
+HEALTH CHECK COMPLETED
+=========================================
+Usage: ./server_health.sh
+
+Linux Server Health & Log Analyzer
+Checks CPU, memory, disk, services, logs, SSH security,
+processes, and network connectivity.
+
+=========================================
+CPU INFORMATION
+=========================================
+CPU Cores:
+2
+
+CPU Load:
+ 0.00, 0.00, 0.00
+
+CPU Usage: 100%
+CPU Status: CRITICAL
+
+=========================================
+MEMORY INFORMATION
+=========================================
+               total        used        free      shared  buff/cache   available
+Mem:           906Mi       394Mi       203Mi       7.1Mi       425Mi       512Mi
+Swap:             0B          0B          0B
+
+Memory Usage: 44%
+Memory Status: HEALTHY
+
+=========================================
+DISK INFORMATION
+=========================================
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3  9.8G  2.2G  7.6G  23% /
+devtmpfs        347M     0  347M   0% /dev
+tmpfs           454M     0  454M   0% /dev/shm
+efivarfs        128K  3.1K  120K   3% /sys/firmware/efi/efivars
+tmpfs           182M  5.3M  177M   3% /run
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+/dev/nvme0n1p2  200M  9.0M  191M   5% /boot/efi
+tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/serial-getty@ttyS0.service
+tmpfs            91M  4.0K   91M   1% /run/user/1000
+
+Disk Usage: 23%
+Disk Status: HEALTHY
+
+=========================================
+SERVICE HEALTH
+=========================================
+sshd : RUNNING
+nfs-server : RUNNING
+nginx : RUNNING
+=========================================
+LOG ANALYSIS
+=========================================
+
+Recent ERROR messages:
+Sep 27 18:15:29 localhost kernel: RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+Sep 27 18:15:38 ip-172-31-4-34.ap-south-1.compute.internal systemd[1]: Failed to start kdump.service - Crash recovery kernel arming.
+Sep 27 18:28:35 ip-172-31-4-34.ap-south-1.compute.internal systemd[1]: Failed to start httpd.service - The Apache HTTP Server.
+Sep 27 18:28:46 ip-172-31-4-34.ap-south-1.compute.internal systemd[1]: Failed to start httpd.service - The Apache HTTP Server.
+Sep 27 18:28:54 ip-172-31-4-34.ap-south-1.compute.internal systemd[1]: Failed to start httpd.service - The Apache HTTP Server.
+Sep 27 18:29:41 ip-172-31-4-34.ap-south-1.compute.internal systemd[1]: Failed to start httpd.service - The Apache HTTP Server.
+Sep 27 18:29:53 ip-172-31-4-34.ap-south-1.compute.internal systemd[1]: Failed to start httpd.service - The Apache HTTP Server.
+Sep 27 21:00:59 ip-172-31-4-34.ap-south-1.compute.internal sshd-session[3939]: error: kex_exchange_identification: read: Connection reset by peer
+=========================================
+FAILED SSH LOGIN ATTEMPTS
+=========================================
+Failed SSH Attempts: 0
+SSH Security Status: HEALTHY
+
+Suspicious IP Addresses:
+
+=========================================
+SECURITY SUMMARY
+=========================================
+Failed SSH Attempts : 0
+Overall Security   : HEALTHY
+
+Top Failed Login Sources:
+
+=========================================
+TOP CPU PROCESSES
+=========================================
+    PID COMMAND         %CPU
+   9986 sshd-session     0.0
+    817 tuned            0.0
+   8551 sshd-session     0.0
+      1 systemd          0.0
+  10049 kworker/1:2-eve  0.0
+
+=========================================
+TOP MEMORY PROCESSES
+=========================================
+    PID COMMAND         %MEM
+      1 systemd          3.8
+   3645 fwupd            2.9
+    817 tuned            2.9
+    804 NetworkManager   1.9
+   8421 systemd          1.4
+
+=========================================
+NETWORK CONNECTIVITY
+=========================================
+Internet Connectivity: OK
+
+=========================================
+OVERALL SERVER STATUS
+=========================================
+Overall Server Status: HEALTHY
