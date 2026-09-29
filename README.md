@@ -153,24 +153,6 @@ reports/health_report_YYYY-MM-DD_HH-MM-SS.txt
 
 Generated reports are excluded from Git tracking through `.gitignore`.
 
-## 🖼️ Screenshots
-
-### Server Health Dashboard
-
-![Server Health Dashboard](screenshots/health-dashboard.png)
-
-### Service Monitoring
-
-![Service Monitoring](screenshots/service-monitoring.png)
-
-### Log Analysis
-
-![Log Analysis](screenshots/log-analysis.png)
-
-### Security Analysis
-
-![Security Analysis](screenshots/security-analysis.png)
-
 ## 🎯 Learning Outcomes
 
 Through this project, I practiced:
